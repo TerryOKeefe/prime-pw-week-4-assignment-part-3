@@ -58,7 +58,7 @@ console.log( `Basket is ${basket}`);
 console.log( `Empty Basket: ${empty(basket)}`);
 console.log( `Basket is now ${basket}` );
 
-
+// Stretch Goals
 console.log('** Stretch Goals **');
 console.log('1.) - Functions in other Functions');
 // Add a global const named maxItems and set it to 5
@@ -67,20 +67,24 @@ const maxItems = 5;
 // Create a function called isFull() and it should:
 // return false if the basket contains less than the max number of Items
 // return true otherwise (equal or more than maxItems)
-function isFull(full){
-  if (full[full.length] >= maxItems) {
-    return true;
-  } else if (full[full.length] < maxItems) {
-    return false;
+function isFull(full){ // start function to check full basket
+  if (full.length >= maxItems) {
+    return true; // true if items are at 5 or above
+  } else if (full.length < maxItems) {
+    return false; // false if items are less than 5
   }
 }
+
+console.log(basket); // check contents in basket
+console.log( 'Is the basket full?', isFull(basket));
+
 addItem('peach');
 addItem('kiwi');
 addItem('potato');
 addItem('treats');
 addItem('tortilla');
 console.log( 'Items now in my basket', basket);
-console.log('Test - isFull', isFull(basket));
+console.log('Is the basket full?', isFull(basket)); // test to see that basket shows full
 
 console.log('2.) - Array built-in Functions');
 // Create a function called removeItem
