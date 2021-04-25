@@ -97,3 +97,5 @@ function removeItem( find, remove, value ) {
     }
   }
 }
+// not really sure how any of this goes
+// will continue to work on it 
