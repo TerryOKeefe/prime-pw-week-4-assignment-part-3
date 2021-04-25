@@ -2,6 +2,9 @@ console.log('***** Cart Functions *****');
 // Make sure to test all functions here in the JS file!
 // We want to see how you are testing your code!!!
 
+// ** Created extra console.logs to help breakdown main assigment parts **
+// ** Added an extra part (2a.) to retest addItem and listItems **
+
 console.log( '1.) - Create addItem Function' );
 
 //create variable named basket and set to an empty array
@@ -31,13 +34,14 @@ function listItems ( array ){ // list items in basket
     return array;
 } // end listItems function
 
-// console.log to test functions
+// console.log to test listItems function
 console.log( basket );
 console.log( 'Items in my basket', basket.length);
 console.log( 'What items are in my basket?', listItems( basket ));
 
 // Extra practice running functions
 console.log( '2a.) - Add milk and run functions');
+
 console.log( 'Add milk to list:', addItem( 'milk' ) );
 console.log( 'Items now in my basket:', listItems( basket ));
 
@@ -53,4 +57,39 @@ function empty ( reset ){ // start function to empty array
 console.log( `Basket is ${basket}`);
 console.log( `Empty Basket: ${empty(basket)}`);
 console.log( `Basket is now ${basket}` );
-//console.log( '');
+
+
+console.log('** Stretch Goals **');
+console.log('1.) - Functions in other Functions');
+// Add a global const named maxItems and set it to 5
+const maxItems = 5;
+
+// Create a function called isFull() and it should:
+// return false if the basket contains less than the max number of Items
+// return true otherwise (equal or more than maxItems)
+function isFull(full){
+  if (full[full.length] >= maxItems) {
+    return true;
+  } else if (full[full.length] < maxItems) {
+    return false;
+  }
+}
+addItem('peach');
+addItem('kiwi');
+addItem('potato');
+addItem('treats');
+addItem('tortilla');
+console.log( 'Items now in my basket', basket);
+console.log('Test - isFull', isFull(basket));
+
+console.log('2.) - Array built-in Functions');
+// Create a function called removeItem
+function removeItem( find, remove, value ) {
+  for (let i = 0; i < array.length; i++) {
+    if (find.indexOf === value) {
+
+    } else if (remove.splice === value) {
+      return;
+    }
+  }
+}
